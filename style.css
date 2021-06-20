@@ -1,0 +1,102 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white : hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+} 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body,button{
+    font-family: "Lexend Deca",sans-serif;
+    background:var(--very-light-gray);
+}
+
+h3{
+    font-family: "Big Shoulders Display",sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color:var(--very-light-gray);
+}
+
+p{
+    font-size: 14px;
+    color: var(--transparent-white)
+}
+.card-container{ 
+    padding:1rem;
+}
+.card-single{
+    color:#fff;
+    padding:3rem;
+    line-height:25px;
+}
+.card-single h3{
+    margin:1.5rem 0;
+    font-size:2rem;
+}
+.card-single p{
+    margin:1.6rem 0;
+}
+.card-single.bright-orange .btn{
+    color:var(--bright-orange);
+}
+.card-single.dark-cyan .btn{
+    color:var(--dark-cyan);
+}
+.card-single.very-dark-cyan .btn{
+    color:var(--very-dark-cyan);
+}
+
+.btn{
+    padding:14px;
+    border-radius:30px;
+    border: 1px solid #fff;
+    width:150px;
+}
+.card-single .btn:hover{
+    background-color:transparent;
+    color:#fff;
+}
+.bright-orange{
+    background-color:var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+}
+.dark-cyan{
+    background-color:var(--dark-cyan);
+}
+.very-dark-cyan{
+    background-color:var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px){
+    .card-container{ 
+        height:98vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:0 5rem;
+    }
+    .bright-orange{
+        border-radius: 10px 0 0 10px;
+    }
+    .very-dark-cyan{
+        border-radius: 0 10px 10px 0;
+    }
+    .card-single p{
+        margin:1.6rem 0 5rem 0;
+        width:12rem;
+    }
+}
+
